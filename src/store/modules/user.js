@@ -16,13 +16,14 @@ export const user = {
       const {name, amount, price: stockPrice} = payload;
       state.money -= stockPrice * amount;
 
-      for (let stock of state.stocks) {
-        if (stock.name === name) {
-          stock.amount += amount;
-          return;
+      const stocksArrLength = state.stocks.length;
+      for (let index = 0; index < stocksArrLength; index++) {
+        if (name === state.stocks[index].name) {
+          state.stocks[index].amount += Number(amount);
+          return true;
         }
       }
-      state.stocks.push({name, amount});
+      state.stocks.push({name, amount: Number(amount)});
 
     },
     sellStock(state, payload) {
