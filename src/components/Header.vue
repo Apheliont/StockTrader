@@ -18,7 +18,7 @@
       </ul>
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="#">End Day</a>
+          <a class="nav-link" href="#" @click="endDay">End Day</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
@@ -26,8 +26,8 @@
             Save & Load
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">Save Data</a>
-            <a class="dropdown-item" href="#">Load Data</a>
+            <a class="dropdown-item" href="#" @click="pushData">Save Data</a>
+            <a class="dropdown-item" href="#" @click="fetchData">Load Data</a>
           </div>
         </li>
       </ul>
@@ -39,10 +39,17 @@
 </template>
 
 <script>
-  import { mapGetters } from 'vuex';
+  import {mapMutations} from 'vuex';
+  import {mapActions} from 'vuex';
+  import {mapGetters} from 'vuex';
+
   export default {
     computed: {
       ...mapGetters(['userMoney'])
+    },
+    methods: {
+      ...mapMutations(['endDay']),
+      ...mapActions(['fetchData', 'pushData']),
     }
   }
 </script>

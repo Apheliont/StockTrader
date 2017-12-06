@@ -9,6 +9,9 @@ export const user = {
     },
     userStocks(state) {
       return state.stocks;
+    },
+    userData(state) {
+      return state;
     }
   },
   mutations: {
@@ -26,7 +29,7 @@ export const user = {
       state.stocks.push({name, amount: Number(amount)});
 
     },
-    sellStock(state, payload) {
+    sellStocks(state, payload) {
       const {name, amount, price: stockPrice} = payload;
       state.money += stockPrice * amount;
 
@@ -40,7 +43,7 @@ export const user = {
           break;
         }
       }
-    }
+    },
   }
 };
 

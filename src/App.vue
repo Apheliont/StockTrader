@@ -8,12 +8,13 @@
 </template>
 
 <script>
-import Header from './components/Header';
-export default {
-  components: {
-    appHeader: Header
+  import Header from './components/Header';
+
+  export default {
+    components: {
+      appHeader: Header
+    }
   }
-}
 </script>
 
 <style scoped>
@@ -21,19 +22,24 @@ export default {
     margin: 30px auto;
     max-width: 1600px;
   }
+
   .header {
     margin-bottom: 30px;
   }
+
   .components-enter {
     transform: translateY(-30px);
     opacity: 0;
   }
+
   .components-enter-active {
     transition-duration: 0.3s;
   }
+
   .components-leave {
 
   }
+
   .components-leave-active {
     transform: translateY(-30px);
     opacity: 0;

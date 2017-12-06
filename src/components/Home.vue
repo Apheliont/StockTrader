@@ -1,6 +1,6 @@
 <template>
   <div class="jumbotron border">
-    <h1 class="display-4">Trade or View your Portfolio</h1>
+    <h1 class="display-4">Make money by buying and selling stocks!</h1>
     <p class="lead">You may Save or Load your data</p>
     <p class="lead">Click on End Day to see how market will change</p>
     <hr class="my-4">
@@ -9,7 +9,8 @@
 </template>
 
 <script>
-  import { mapGetters } from 'vuex';
+  import {mapGetters} from 'vuex';
+
   export default {
     computed: {
       ...mapGetters(['userMoney'])
