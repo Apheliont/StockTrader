@@ -18,7 +18,7 @@ export const store = new Vuex.Store({
     saveAllData(state, data) {
       state.stock.stocks = data.marketData;
       state.user.money = Number(data.userData.money);
-      state.user.stocks = state.user.stocks ? state.user.stocks : [];
+      state.user.stocks = data.userData.stocks ? data.userData.stocks : [];
     }
   },
   actions: {
