@@ -1,7 +1,7 @@
 <template>
   <div class="my-container d-md-flex justify-content-around flex-wrap">
     <template v-for="stock in stocks">
-      <app-buy-stock :stock="stock"></app-buy-stock>
+      <app-buy-stock :stock="stock" tabindex="index"></app-buy-stock>
     </template>
   </div>
 </template>

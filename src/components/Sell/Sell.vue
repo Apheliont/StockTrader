@@ -1,7 +1,6 @@
 <template>
   <transition-group class="d-md-flex justify-content-around flex-wrap" name="sell">
-    <app-sell-stock class="my-container" v-for="(stock, index) in userStocks" :stock="stock"
-                    key="index"></app-sell-stock>
+    <app-sell-stock class="my-container" v-for="(stock, index) in userStocks" :stock="stock" key="index"></app-sell-stock>
     <app-placeholder v-if="isUserStockEmpty" key="placeholder"></app-placeholder>
   </transition-group>
 </template>
@@ -52,6 +51,6 @@
   }
 
   .sell-move {
-    transition: all 1s;
+    transition: all 0.8s;
   }
 </style>

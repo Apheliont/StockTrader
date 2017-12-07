@@ -32,7 +32,7 @@
         </li>
       </ul>
       <span class="navbar-text">
-        Funds: <span class="font-weight-bold">${{userMoney}}</span>
+        Funds: <span class="font-weight-bold">{{userMoney | moneyFormat}}</span>
     </span>
     </div>
   </nav>

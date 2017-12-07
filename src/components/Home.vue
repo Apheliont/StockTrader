@@ -4,7 +4,7 @@
     <p class="lead">You may Save or Load your data</p>
     <p class="lead">Click on End Day to see how market will change</p>
     <hr class="my-4">
-    <p class="h4">Your Funds: ${{userMoney}}</p>
+    <p class="h4">Your Funds: {{userMoney | moneyFormat}}</p>
   </div>
 </template>
 
